@@ -14,12 +14,14 @@ export default{
   },
   mounted(){
     this.richiestaGet();
+   
 
   },
   methods:{
     richiestaGet(){
       axios.get(this.store.apiUrl).then(risultato => {
-        this.store.birrerie = risultato.data.results;
+        this.store.birrerie = risultato.data;
+        
       })
       .catch(error => {
                 console.error('Errore nella richiesta API:', error); // Verifica eventuali errori nella richiesta API
@@ -31,7 +33,7 @@ export default{
 
 <template>
   <main>
-    <AppCard v-for="birre in  this.store.birrerie" :info="birre"/>
+    <AppCard v-for="birre in store.birrerie" :info="birre"/>
   </main>
  
 </template>
