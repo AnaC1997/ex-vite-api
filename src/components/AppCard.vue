@@ -37,5 +37,7 @@ mounted() {
 .card {
     padding: 1rem;
     background: red;
+    margin: 1rem;
+    min-width: 30%;
 }
 </style>
