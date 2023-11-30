@@ -34,6 +34,6 @@ export default{
 <style scoped>
 .card{
     padding: 1rem;
-    background: orangered;
+    background:red;
 }
 </style>

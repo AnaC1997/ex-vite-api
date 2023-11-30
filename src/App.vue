@@ -20,7 +20,10 @@ export default{
     richiestaGet(){
       axios.get(this.store.apiUrl).then(risultato => {
         this.store.birrerie = risultato.data.results;
-      });
+      })
+      .catch(error => {
+                console.error('Errore nella richiesta API:', error); // Verifica eventuali errori nella richiesta API
+            });
 		},
 	}
 }
@@ -36,11 +39,16 @@ export default{
 <style scoped>
 
 main {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 
 	display: flex;
 	flex-wrap: wrap;
+
 }
 
 </style>
+
+
+
+
