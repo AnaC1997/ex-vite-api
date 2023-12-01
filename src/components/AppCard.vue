@@ -26,7 +26,7 @@ export default {
             <p>Address: 1 {{ info.address_1 }}</p>
             <p>Address: 2 {{ info.address_2 }}</p>
             <p>Address: 3 {{ info.address_3 }}</p>
-            <p>City: {{ info.city }}</p>
+            <p> {{ info.city }}</p>
             <p>Province: {{ info.state_province }}</p>
             <p>Codice Postal: {{ info.postal_code }}</p>
             <p>County: {{ info.country }}</p>
