@@ -4,7 +4,7 @@ export default{
     name: "AppSearch",
     data(){
         return {
-            store,
+            store
         };
     },
     methods:{

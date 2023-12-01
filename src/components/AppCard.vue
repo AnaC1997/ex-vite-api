@@ -22,18 +22,8 @@ export default {
     <div>
         <div class="card">
             <h4>Name: {{ info.name }}</h4>
-            <p>{{ info.brewery_type }}</p>
-            <p>Address: 1 {{ info.address_1 }}</p>
-            <p>Address: 2 {{ info.address_2 }}</p>
-            <p>Address: 3 {{ info.address_3 }}</p>
-            <p> {{ info.city }}</p>
-            <p>Province: {{ info.state_province }}</p>
+            <p>Cita: {{info.city }}</p>
             <p>Codice Postal: {{ info.postal_code }}</p>
-            <p>County: {{ info.country }}</p>
-            <p>{{ info.longitude }}</p>
-            <p>{{ info.latitude }}</p>
-            <p>{{ info.website_url }}</p>
-            <p>{{ info.state }}</p>
             <p>{{ info.street }}</p>
         </div>
     </div>

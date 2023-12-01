@@ -12,12 +12,12 @@ export default {
   }, data() {
     return {
       store,
-      
+
     }
   },
   mounted() {
     this.richiestaGet();
-  
+
 
 
   },
@@ -32,17 +32,29 @@ export default {
         });
     },
     searchBirrerie() {
-      let dati = `${this.store.apiUrl}&by_city=${this.store.searchBirre}`;
-      console.log("richiama: ", dati);
-      
-      axios.get(dati).then(risultato => {
-        this.store.birrerie = risultato.data;
+       // Ricerca per città
+  let datiByCity = `${this.store.apiUrl}&by_city=${this.store.searchBirre}`;
+  axios.get(datiByCity).then(risultato => {
+    this.store.birrerie = risultato.data;
+    this.store.searchBirre = ""; //
+    console.log("Risultato ricerca per città:", risultato.data);
+  });
 
-        console.log("risultato filtro" + risultato.data.result)
-      })
+   // Ricerca per nome
+   let datiByName = `${this.store.apiUrl}&by_name=${this.store.searchBirre}`;
+  axios.get(datiByName).then(risultato => {
+    this.store.birrerie = risultato.data;
+    this.store.searchBirre = ""; //
+    console.log("Risultato ricerca per nome:", risultato.data);
+  });
 
-     
-      
+    // Ricerca per codice postal 
+    let datiCodicePostal = `${this.store.apiUrl}&by_postal=${this.store.searchBirre}`;
+  axios.get(datiCodicePostal).then(risultato => {
+    this.store.birrerie = risultato.data;
+    this.store.searchBirre = ""; //
+    console.log("Risultato ricerca per codice postal:", risultato.data);
+  });
 
     }
   }
