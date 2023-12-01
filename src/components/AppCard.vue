@@ -3,25 +3,33 @@
 export default {
     name: "AppCard",
     props: ["info"],
-mounted() {
-    console.log('Informazioni ricevute:', this.info); // Verifica se le prop sono ricevute correttamente
+    mounted() {
+        console.log('Informazioni ricevute:', this.info); // Verifica se le prop sono ricevute correttamente
+       
+    },
+    
 }
-}
+
+
+
+
+
+
 
 </script>
 
 <template>
     <div>
         <div class="card">
-            <h4>{{ info.name }}</h4>
+            <h4>Name: {{ info.name }}</h4>
             <p>{{ info.brewery_type }}</p>
             <p>Address: 1 {{ info.address_1 }}</p>
             <p>Address: 2 {{ info.address_2 }}</p>
             <p>Address: 3 {{ info.address_3 }}</p>
-            <p>{{ info.city }}</p>
-            <p>{{ info.state_province }}</p>
-            <p>{{ info.postal_code }}</p>
-            <p>{{ info.country }}</p>
+            <p>City: {{ info.city }}</p>
+            <p>Province: {{ info.state_province }}</p>
+            <p>Codice Postal: {{ info.postal_code }}</p>
+            <p>County: {{ info.country }}</p>
             <p>{{ info.longitude }}</p>
             <p>{{ info.latitude }}</p>
             <p>{{ info.website_url }}</p>
